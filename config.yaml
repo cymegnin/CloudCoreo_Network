@@ -8,6 +8,12 @@
 ##     type: string
 
 variables:
+  DATADOG_KEY:
+    default: NA
+    value:
+    description: If you have a datadog key, enter it here and we will install the agent
+    overrides:
+    required: false
   PUBLIC_SUBNET_NAME:
     required: true
     description: the cloudcoreo name of the public vpc subnets
