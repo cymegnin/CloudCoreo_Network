@@ -99,3 +99,7 @@ variables:
     default: cy-test-vpc
     description: the name of the VPC
     required: true
+  ZONE:
+    default: cy.cloudcoreo.com
+    description: the dns zone
+    required: true
