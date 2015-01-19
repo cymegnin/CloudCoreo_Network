@@ -7,6 +7,41 @@
 ##     required: true
 ##     type: string
 
-variables: {}
-
-                  
+variables:
+  PUBLIC_SUBNET_NAME:
+    required: true
+    description: the cloudcoreo name of the public vpc subnets
+    default: cy-public-subnet
+    type: string
+  PUBLIC_ROUTE_NAME:
+    required: true
+    description: the name to give to the public route
+    default: cy-public-route
+  PRIVATE_SUBNET_NAME:
+    required: true
+    description: the cloudcoreo name of the private vpc subnets
+    default: cy-private-subnet
+  PRIVATE_ROUTE_NAME:
+    required: true
+    description: the name to give to the private route
+    default: cy-private-route
+  PRIVATE_SUBNETS:
+    default: "STACK::coreo_aws_vpc_subnet.cy-private-subnet.subnet_ids"
+    required: true
+    descripiton: comma seperated list of the private subnet ids
+  VPN_INSTANCE_TYPE:
+    default: t2.micro
+    description: the instance type for  the VPN_INSTANCE
+    overrides:
+    required: true
+    type:
+  VPC_NAME:
+    default: cy-test-vpc
+    description: the name of the VPC
+    required: true
+  ZONE:
+    default: cy.cloudcoreo.com
+    description: the dns entry for the zone
+    overrides:
+    required: true
+    type:
