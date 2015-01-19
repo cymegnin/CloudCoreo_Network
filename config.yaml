@@ -8,6 +8,60 @@
 ##     type: string
 
 variables:
+  VPN_KEY_BUCKET:
+    default: cyvpnk
+    description: the bucket we should store the keys in
+    overrides:
+    required: true
+    type:
+  VPN_KEY_BUCKET_REGION:
+    default: us-west-2
+    description: the region where the vpn key bucket is located
+    overrides:
+    required: true
+    type:
+  VPN_SSH_KEY_NAME:
+    default: Cy_Key
+    description: the key pair we can use to ssh into boxes
+    overrides:
+    required: true
+    type:
+  NAT_KEY:
+    default: Cy_Key
+    description: the key pair we can use to ssh into boxes
+    overrides:
+    required: true
+    type:
+  VPN_DNS_PREFIX:
+    default: cy-vpn
+    description: the dns entry to create for the VPN server (<prefix>.<zone>)
+    overrides:
+    required: true
+    type:
+  BACKUP_BUCKET:
+    default: cybu
+    description:
+    overrides:
+    required: true
+    type:
+  DNS_ZONE:
+    default: cy.cloudcoreo.com
+    description:
+    overrides:
+    required: true
+    type:
+  ENV:
+    default: dev
+    description:
+    overrides:
+    required: true
+    type:
+  REGION:
+    default: us-east-1
+    description:
+    overrides:
+    required: true
+    type:
   DATADOG_KEY:
     default: NA
     value:
@@ -45,9 +99,3 @@ variables:
     default: cy-test-vpc
     description: the name of the VPC
     required: true
-  ZONE:
-    default: cy.cloudcoreo.com
-    description: the dns entry for the zone
-    overrides:
-    required: true
-    type:
